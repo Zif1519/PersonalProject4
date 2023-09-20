@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f95207855cccc2b428f8f3ea56e5b708, type: 3}
   m_Name: ShopData
   m_EditorClassIdentifier: 
-  _InventoryID: 0
-  _InventoryName: 
+  _InventoryID: 2
+  _InventoryName: "\uC0C1\uC810"
   _InventoryDescription: 
-  _InventoryType: 0
-  _SlotSize: 9
+  _InventoryType: 2
+  _SlotSize: 30
   _ItemsData: []

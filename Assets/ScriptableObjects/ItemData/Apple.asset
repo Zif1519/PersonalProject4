@@ -10,11 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 63124ff902abd9e4cba15e44121d7399, type: 3}
-  m_Name: Sword
+  m_Name: Apple
   m_EditorClassIdentifier: 
-  _ItemID: 0
-  _ItemName: 
-  _ItemDescription: 
+  _ItemID: 1001
+  _ItemName: Apple
+  _ItemDescription: "\uCCB4\uB825 \uD68C\uBCF5\uC6A9 \uC0AC\uACFC"
+  _ItemPrice: 30
+  _ItemSprite: {fileID: 21300000, guid: 60c1d42986dc0094c808b9e135f31ba2, type: 3}
   _ItemType: 0
   _ItemRarity: 0
   _ItemStatusBuff:
@@ -24,3 +26,5 @@ MonoBehaviour:
     _Critical: 0
     _Dodge: 0
     _Speed: 0
+  _IsStackable: 1
+  _MaxStackAmount: 20

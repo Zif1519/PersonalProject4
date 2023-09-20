@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f95207855cccc2b428f8f3ea56e5b708, type: 3}
   m_Name: PlayerEquipmentData
   m_EditorClassIdentifier: 
-  _InventoryID: 0
-  _InventoryName: 
-  _InventoryDescription: 
-  _InventoryType: 0
+  _InventoryID: 3
+  _InventoryName: "\uC7A5\uCC29\uCC3D"
+  _InventoryDescription: "\uCE90\uB9AD\uD130 \uC7A5\uCC29\uCC3D"
+  _InventoryType: 1
   _SlotSize: 9
   _ItemsData: []

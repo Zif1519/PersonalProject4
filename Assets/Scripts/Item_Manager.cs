@@ -4,5 +4,8 @@ using UnityEngine;
 
 public class Item_Manager : MonoBehaviour
 {
+    [SerializeField] private List<GameObject> _ListItem_Prefabs;
+
     
+
 }

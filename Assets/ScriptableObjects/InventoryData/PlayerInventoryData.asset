@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: PlayerInventoryData
   m_EditorClassIdentifier: 
   _InventoryID: 1
-  _InventoryName: Inventory
+  _InventoryName: "\uC778\uBCA4\uD1A0\uB9AC"
   _InventoryDescription: "\uC8FC\uC778\uACF5 \uC778\uBCA4\uD1A0\uB9AC"
   _InventoryType: 0
   _SlotSize: 9

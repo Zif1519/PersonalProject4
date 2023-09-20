@@ -51,18 +51,3 @@ public class UI_Manager : MonoBehaviour
         CallEventViewStateChanged(VIEWSTATE.INVENTORY);
     }
 }
-
-public class StatusData
-{
-    [SerializeField] public int _Attack;
-    [SerializeField] public int _Defence;
-    [SerializeField] public int _Health;
-    [SerializeField] public int _Critical;
-    [SerializeField] public int _Dodge;
-    [SerializeField] public int _Speed;
-}
-
-public class InventoryData
-{
-    
-}

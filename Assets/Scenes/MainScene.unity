@@ -5372,6 +5372,7 @@ GameObject:
   - component: {fileID: 1204044916}
   - component: {fileID: 1204044915}
   - component: {fileID: 1204044914}
+  - component: {fileID: 1204044917}
   m_Layer: 5
   m_Name: StatusPanel
   m_TagString: Untagged
@@ -5454,6 +5455,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1204044912}
   m_CullTransparentMesh: 1
+--- !u!114 &1204044917
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1204044912}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1f7780a06668dd4689a005cb344640c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1231722556
 GameObject:
   m_ObjectHideFlags: 0
@@ -7060,6 +7073,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d5804506e512da4da628fa74a1c5011, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _CurrentViewState: 0
 --- !u!114 &1765886507
 MonoBehaviour:
   m_ObjectHideFlags: 0

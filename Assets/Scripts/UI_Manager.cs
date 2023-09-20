@@ -32,6 +32,24 @@ public class UI_Manager : MonoBehaviour
     {
         OnViewStateChanged?.Invoke(newViewState);
     }
+
+
+    public void SetViewState_Main()
+    {
+        _CurrentViewState = VIEWSTATE.MAIN;
+        CallEventViewStateChanged(VIEWSTATE.MAIN);
+    }
+    public void SetViewState_Status()
+    {
+        _CurrentViewState = VIEWSTATE.STATUS;
+        CallEventViewStateChanged(VIEWSTATE.STATUS);
+    }
+
+    public void SetViewState_Inventory()
+    {
+        _CurrentViewState = VIEWSTATE.INVENTORY;
+        CallEventViewStateChanged(VIEWSTATE.INVENTORY);
+    }
 }
 
 public class StatusData

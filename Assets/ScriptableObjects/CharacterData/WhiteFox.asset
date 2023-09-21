@@ -16,6 +16,7 @@ MonoBehaviour:
   _characterName: "\uD558\uC580 \uC5EC\uC6B0"
   _characterDescription: "\uB2A5\uB825\uCE58\uAC00 \uB192\uB2E4"
   _gold: 1000
+  _gem: 500
   _level: 3
   _exp: 100
   _characterSprite: {fileID: 21300000, guid: d53cd1451c29d1d4da311e57bcbf1a8b, type: 3}

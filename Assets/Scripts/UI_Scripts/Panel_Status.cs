@@ -4,7 +4,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class StatusPanel : MonoBehaviour
+public class Panel_Status : MonoBehaviour
 {
     [SerializeField] private UI_Manager uiManager;
     [SerializeField] private TextMeshProUGUI _text_Attack;
@@ -14,36 +14,23 @@ public class StatusPanel : MonoBehaviour
     [SerializeField] private TextMeshProUGUI _text_Dodge;
     [SerializeField] private TextMeshProUGUI _text_Speed;
     [SerializeField] private TextMeshProUGUI _characterDescription;
-    private void Awake()
-    {
-        uiManager.OnStatusChanged += OnStatusChanged;
-        Debug.Log("이벤트 등록");
-        uiManager.OnViewStateChanged += OnViewStateChanged;
-    }
+
     // Start is called before the first frame update
     void Start()
     {
         gameObject.SetActive(false);
         uiManager.OnStatusChanged -= OnStatusChanged;
         uiManager.OnStatusChanged += OnStatusChanged;
-        Debug.Log("이벤트 등록");
         uiManager.OnViewStateChanged += OnViewStateChanged;
+        uiManager.OnCharacterDataChanged += OnCharacterChanged;
     }
 
-    private void OnEnable()
+    private void OnDestroy()
     {
         if (uiManager != null)
         {
             uiManager.OnStatusChanged -= OnStatusChanged;
-            uiManager.OnStatusChanged += OnStatusChanged;
-        }
-    }
-
-    private void OnDisable()
-    {
-        if (uiManager != null)
-        {
-            uiManager.OnStatusChanged -= OnStatusChanged;
+            uiManager.OnCharacterDataChanged -= OnCharacterChanged;
         }
     }
 
@@ -67,5 +54,10 @@ public class StatusPanel : MonoBehaviour
         {
             gameObject.SetActive(false);
         }
+    }
+
+    public void OnCharacterChanged(CharacterData newCharacterData)
+    {
+        _characterDescription.text = "  캐릭터 특징  : \n" + newCharacterData._characterDescription;
     }
 }

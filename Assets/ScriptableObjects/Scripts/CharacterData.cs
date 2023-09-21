@@ -12,6 +12,7 @@ public class CharacterData : ScriptableObject
     [SerializeField] public string _characterName;
     [SerializeField] public string _characterDescription;
     [SerializeField] public int _gold;
+    [SerializeField] public int _gem;
     [SerializeField] public int _level;
     [SerializeField] public int _exp;
 

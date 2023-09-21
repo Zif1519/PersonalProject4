@@ -13,6 +13,10 @@ public class UI_Manager : MonoBehaviour
     public event Action<StatusData> OnStatusChanged;
     public event Action<InventoryData> OnInventoryDataChanged;
     public event Action<VIEWSTATE> OnViewStateChanged;
+
+    public Sprite[] _item_BackgroundSprites;
+    //public Sprite[] _item_frameSprites;
+
     private void Awake()
     {
         Instance = this;

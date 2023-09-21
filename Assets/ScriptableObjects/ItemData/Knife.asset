@@ -12,19 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63124ff902abd9e4cba15e44121d7399, type: 3}
   m_Name: Knife
   m_EditorClassIdentifier: 
-  _ItemID: 2001
-  _ItemName: Knife
-  _ItemDescription: "\uC791\uC740 \uCE7C"
-  _ItemPrice: 100
-  _ItemSprite: {fileID: 21300000, guid: 0d047a16ca0627f4c8781f0168dcc35a, type: 3}
-  _ItemType: 0
-  _ItemRarity: 0
-  _ItemStatusBuff:
-    _Attack: 5
-    _Defence: 0
-    _Health: 0
-    _Critical: 0
-    _Dodge: 0
-    _Speed: 0
-  _IsStackable: 0
-  _MaxStackAmount: 0
+  _itemDataID: 0
+  _itemBaseName: 
+  _itemBaseDescription: 
+  _itemBasePrice: 0
+  _itemBaseType: 0
+  _itemBaseRarity: 0
+  _itemSprite: {fileID: 0}

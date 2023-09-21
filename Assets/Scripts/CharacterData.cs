@@ -8,10 +8,13 @@ using UnityEngine;
 [Serializable]
 public class CharacterData : ScriptableObject
 {
-    [SerializeField] public int CharacterID;
-    [SerializeField] public string CharacterName;
-    [SerializeField] public string CharacterDescription;
+    [SerializeField] public int _characterID;
+    [SerializeField] public string _characterName;
+    [SerializeField] public string _characterDescription;
+    [SerializeField] public int _gold;
+    [SerializeField] public int _level;
+    [SerializeField] public int _exp;
 
-    
-
+    [SerializeField] public Sprite _characterSprite;
+    [SerializeField] public InventoryData _inventoryData;
 }

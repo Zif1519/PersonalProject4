@@ -17,4 +17,5 @@ public class CharacterData : ScriptableObject
 
     [SerializeField] public Sprite _characterSprite;
     [SerializeField] public InventoryData _inventoryData;
+    [SerializeField] public InventoryData _equipmentData;
 }

@@ -10,12 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f95207855cccc2b428f8f3ea56e5b708, type: 3}
-  m_Name: PlayerInventoryData
+  m_Name: WhiteFoxInventoryData 1
   m_EditorClassIdentifier: 
-  _InventoryID: 1
-  _InventoryName: "\uC778\uBCA4\uD1A0\uB9AC"
-  _InventoryDescription: "\uC8FC\uC778\uACF5 \uC778\uBCA4\uD1A0\uB9AC"
-  _InventoryType: 0
-  _SlotSize: 9
-  _ItemsData:
-  - {fileID: 11400000, guid: dff3fa26c8658b04a87f7760f86d9da4, type: 2}
+  InventoryID: 0
+  InventoryName: 
+  InventoryDescription: "\uD558\uC580\uC5EC\uC6B0 \uC778\uBCA4\uD1A0\uB9AC"
+  InventoryType: 1
+  SlotSize: 9
+  Items: []

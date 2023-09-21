@@ -10,10 +10,6 @@ public class Character : MonoBehaviour
     public event Action<InventoryData> OnEquipmentDataChanged;
     public event Action<StatusData> OnStatusDataChanged;
 
-    private void Start()
-    {
-    }
-
     [SerializeField] private CharacterData _currentCharacterData;
 
     public CharacterData CharacterData 

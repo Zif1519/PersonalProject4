@@ -22,7 +22,6 @@ public class UI_Manager : MonoBehaviour
         Instance = this;
     }
 
-
     public void CallEventStatusChanged(StatusData newStatusData)
     {
         OnStatusChanged?.Invoke(newStatusData);
@@ -60,7 +59,11 @@ public class UI_Manager : MonoBehaviour
 
     public void SetMainCharacter(Character newCharacter)
     {
-        newCharacter.OnCharacterDataChanged += OnCharacterChanged;
+        newCharacter.OnCharacterDataChanged += CallEventCharacterDataChanged;
+        newCharacter.OnInventoryDataChanged += CallEventInventoryChanged;
+        newCharacter.OnStatusDataChanged += CallEventStatusChanged;
+
+        CallEventViewStateChanged(VIEWSTATE.MAIN);
     }
     public void UnsetMainCharacter(Character oldCharacter)
     {

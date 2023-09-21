@@ -10,24 +10,24 @@ public enum INVENTORYTYPE { CHARACTERINVENTORY = 0, EQUIPMENT, SHOP }
 [Serializable]
 public class InventoryData : ScriptableObject
 {
-    [SerializeField] public int InventoryID;
-    [SerializeField] public string InventoryName;
-    [SerializeField] public string InventoryDescription;
+    [SerializeField] public int _inventoryID;
+    [SerializeField] public string _inventoryName;
+    [SerializeField] public string _inventoryDescription;
     [Header("Inventory Setting")]
-    [SerializeField] public INVENTORYTYPE InventoryType;
-    [SerializeField] public int SlotSize;
+    [SerializeField] public INVENTORYTYPE _inventoryType;
+    [SerializeField] public int _slotSize;
 
-    [SerializeField] public List<Item> Items;
+    [SerializeField] public List<Item> _items;
     
 
     public InventoryData()
     {
-        InventoryID = 0;
-        InventoryName = "";
-        InventoryDescription = "";
-        InventoryType = INVENTORYTYPE.CHARACTERINVENTORY;
-        SlotSize = 9;
+        _inventoryID = 0;
+        _inventoryName = "";
+        _inventoryDescription = "";
+        _inventoryType = INVENTORYTYPE.CHARACTERINVENTORY;
+        _slotSize = 9;
 
-        Items = new List<Item>();
+        _items = new List<Item>();
     }
 }

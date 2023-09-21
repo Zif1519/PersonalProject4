@@ -21,3 +21,10 @@ MonoBehaviour:
   _characterSprite: {fileID: 21300000, guid: d53cd1451c29d1d4da311e57bcbf1a8b, type: 3}
   _inventoryData: {fileID: 11400000, guid: 49d4183ad8ca3cf4dbaa12b45ae5531d, type: 2}
   _equipmentData: {fileID: 11400000, guid: 0620726ad4cdf8b42916934d0ee8e59f, type: 2}
+  _statusData:
+    _Attack: 10
+    _Defence: 11
+    _Health: 12
+    _Critical: 13
+    _Dodge: 14
+    _Speed: 15

@@ -11,8 +11,8 @@ public class InventoryUI : MonoBehaviour
     
     public void ResetInventoryView()
     {
-        List<Item> items = InventoryData.Items;
-        for (int i=0; i < InventoryData.Items.Count; i++)
+        List<Item> items = InventoryData._items;
+        for (int i=0; i < InventoryData._items.Count; i++)
         {
             var slot = Instantiate(SlotPrefab, SV_Content);
             slot.GetComponent<SlotUI>().InitSlot(items[i]);

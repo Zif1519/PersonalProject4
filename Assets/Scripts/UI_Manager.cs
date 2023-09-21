@@ -3,7 +3,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-
 public enum VIEWSTATE { MAIN = 0, STATUS, INVENTORY }
 public class UI_Manager : MonoBehaviour
 {
@@ -13,6 +12,7 @@ public class UI_Manager : MonoBehaviour
     public event Action<StatusData> OnStatusChanged;
     public event Action<InventoryData> OnInventoryDataChanged;
     public event Action<VIEWSTATE> OnViewStateChanged;
+    public event Action<CharacterData> OnCharacterDataChanged;
 
     public Sprite[] _item_BackgroundSprites;
     //public Sprite[] _item_frameSprites;
@@ -31,10 +31,13 @@ public class UI_Manager : MonoBehaviour
     {
         OnInventoryDataChanged?.Invoke(newInventoryData);
     }
-    
     public void CallEventViewStateChanged(VIEWSTATE newViewState)
     {
         OnViewStateChanged?.Invoke(newViewState);
+    }
+    public void CallEventCharacterDataChanged(CharacterData newCharacterData)
+    {
+        OnCharacterDataChanged?.Invoke(newCharacterData);
     }
 
 
@@ -53,5 +56,21 @@ public class UI_Manager : MonoBehaviour
     {
         _CurrentViewState = VIEWSTATE.INVENTORY;
         CallEventViewStateChanged(VIEWSTATE.INVENTORY);
+    }
+
+    public void SetMainCharacter(Character newCharacter)
+    {
+        newCharacter.OnCharacterDataChanged += OnCharacterChanged;
+    }
+    public void UnsetMainCharacter(Character oldCharacter)
+    {
+        oldCharacter.OnCharacterDataChanged -= OnCharacterChanged;
+    }
+    public void OnCharacterChanged(CharacterData newCharacterData)
+    {
+        CallEventInventoryChanged(newCharacterData._inventoryData);
+        CallEventViewStateChanged(VIEWSTATE.MAIN);
+        CallEventStatusChanged(newCharacterData._statusData);
+        CallEventCharacterDataChanged(newCharacterData);
     }
 }

@@ -15,6 +15,8 @@ public class SlotUI : MonoBehaviour
     [SerializeField] public Sprite[] _backgroundImages;
     [SerializeField] public Image _currentBackground;
     [SerializeField] public Image _currentItemImage;
+    [SerializeField] public GameObject _isEquiped;
+    [SerializeField] public Button _button;
 
     public void SetItemSlot(Item newitem)
     {
@@ -23,6 +25,7 @@ public class SlotUI : MonoBehaviour
         _item = newitem;
         _currentItemImage.sprite = newitem.ItemSprite;
         _currentBackground.sprite = _backgroundImages[(int)newitem.ItemRarity];
+        CheckEquipButton();
     }
 
     public void SetEmptySlot()
@@ -32,6 +35,7 @@ public class SlotUI : MonoBehaviour
         _item = null;
         _currentItemImage.sprite = null;
         _currentBackground.sprite = _backgroundImages[0];
+        CheckEquipButton();
     }
 
     public void ClearSlot()
@@ -40,5 +44,22 @@ public class SlotUI : MonoBehaviour
         _isEmpty =true;
         _item = null;
         _currentBackground.sprite = _backgroundImages[0];
+        CheckEquipButton();
+        _isEquiped.SetActive(false);
+    }
+
+    public void CheckEquipButton()
+    {
+        if(_isActive && !_isEmpty && _item?.ItemType == ITEMTYPE.WEAPON)
+        {
+            _button.gameObject.SetActive(true);
+        }else
+        {
+            _button.gameObject.SetActive(false);
+        }
+    }
+    public void OnClickEquipButton()
+    {
+        _isEquiped.SetActive(true);
     }
 }

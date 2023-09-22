@@ -6,7 +6,7 @@ using UnityEngine.UIElements;
 
 
 public enum ITEMTYPE { FOOD, POTION, WEAPON, SHIELD, HELMET, GLOVES, NECKLACE, BOOTS, ARMOR, RING }
-public enum ITEMRARITY { COMMON =0, UNCOMMON =1, RARE=2, EPIC =3, LEGENDARY = 4 }
+public enum ITEMRARITY { NULL=0, COMMON =1, UNCOMMON =2, RARE=3, EPIC =4, LEGENDARY = 5 }
 
 [Serializable]
 public class Item

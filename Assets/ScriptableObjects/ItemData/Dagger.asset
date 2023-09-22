@@ -12,19 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63124ff902abd9e4cba15e44121d7399, type: 3}
   m_Name: Dagger
   m_EditorClassIdentifier: 
-  _ItemID: 2002
-  _ItemName: Dagger
-  _ItemDescription: "\uC554\uC0B4\uC790\uC6A9 \uB300\uAC70"
-  _ItemPrice: 300
-  _ItemSprite: {fileID: 21300000, guid: 1ff1175d56df9eb4f8cfa0ba429d9254, type: 3}
-  _ItemType: 0
-  _ItemRarity: 0
-  _ItemStatusBuff:
-    _Attack: 0
-    _Defence: 0
-    _Health: 0
-    _Critical: 0
-    _Dodge: 0
-    _Speed: 0
-  _IsStackable: 0
-  _MaxStackAmount: 0
+  _itemDataID: 0
+  _itemBaseName: 
+  _itemBaseDescription: 
+  _itemBasePrice: 0
+  _itemBaseType: 2
+  _itemBaseRarity: 1
+  _itemSprite: {fileID: 21300000, guid: 1ff1175d56df9eb4f8cfa0ba429d9254, type: 3}

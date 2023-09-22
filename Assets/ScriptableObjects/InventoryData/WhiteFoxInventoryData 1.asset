@@ -12,9 +12,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f95207855cccc2b428f8f3ea56e5b708, type: 3}
   m_Name: WhiteFoxInventoryData 1
   m_EditorClassIdentifier: 
-  InventoryID: 0
-  InventoryName: 
-  InventoryDescription: "\uD558\uC580\uC5EC\uC6B0 \uC778\uBCA4\uD1A0\uB9AC"
-  InventoryType: 1
-  SlotSize: 9
-  Items: []
+  _inventoryID: 0
+  _inventoryName: 
+  _inventoryDescription: 
+  _inventoryType: 0
+  _slotCount: 6
+  _items:
+  - _itemID: 0
+    _itemName: 
+    _itemData: {fileID: 11400000, guid: 89a427e15deff1746a61efc54bf56f0d, type: 2}
+    _itemRarity: 1
+  - _itemID: 0
+    _itemName: 
+    _itemData: {fileID: 11400000, guid: 89a427e15deff1746a61efc54bf56f0d, type: 2}
+    _itemRarity: 2
+  - _itemID: 0
+    _itemName: 
+    _itemData: {fileID: 11400000, guid: 89a427e15deff1746a61efc54bf56f0d, type: 2}
+    _itemRarity: 3
+  - _itemID: 0
+    _itemName: 
+    _itemData: {fileID: 11400000, guid: 3dc42b24a79c1374b830847981b1bae7, type: 2}
+    _itemRarity: 4

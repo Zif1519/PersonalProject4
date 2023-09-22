@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 using static UnityEditor.Progress;
@@ -7,28 +8,37 @@ using static UnityEditor.Progress;
 public class SlotUI : MonoBehaviour
 {
     public bool _isEmpty = true;
-   // public int _itemCount = 0;
     public Item _item;
+    public bool _isActive = true;
 
-    [Header("Need to Connect")]
-    [SerializeField] private Image _backgroundImage;
-    //[SerializeField] private Image _frameImage;
-    [SerializeField] private Image _itemImage;
-    public void InitSlot(Item newitem)
+    [SerializeField] public InventoryUI _inventoryUI;
+    [SerializeField] public Sprite[] _backgroundImages;
+    [SerializeField] public Image _currentBackground;
+    [SerializeField] public Image _currentItemImage;
+
+    public void SetItemSlot(Item newitem)
     {
+        _isActive = true;
         _isEmpty = false;
         _item = newitem;
-        newitem.OnItemDataChanged -= SetItemSlot;
-        newitem.OnItemDataChanged += SetItemSlot; 
+        _currentItemImage.sprite = newitem.ItemSprite;
+        _currentBackground.sprite = _backgroundImages[(int)newitem.ItemRarity];
     }
 
-    private void OnDisable()
+    public void SetEmptySlot()
     {
-        _item.OnItemDataChanged -= SetItemSlot;
+        _isActive = true;
+        _isEmpty = true;
+        _item = null;
+        _currentItemImage.sprite = null;
+        _currentBackground.sprite = _backgroundImages[0];
     }
-    public void SetItemSlot()
+
+    public void ClearSlot()
     {
-        _backgroundImage.sprite = UI_Manager.Instance._item_BackgroundSprites[(int)_item.ItemRarity];
-       // _frameImage.sprite = UI_Manager.Instance._item_frameSprites[(int)item.ItemRarity];
+        _isActive = false;
+        _isEmpty =true;
+        _item = null;
+        _currentBackground.sprite = _backgroundImages[0];
     }
 }

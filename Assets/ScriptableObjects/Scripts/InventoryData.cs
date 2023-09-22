@@ -15,7 +15,7 @@ public class InventoryData : ScriptableObject
     [SerializeField] public string _inventoryDescription;
     [Header("Inventory Setting")]
     [SerializeField] public INVENTORYTYPE _inventoryType;
-    [SerializeField] public int _slotSize;
+    [SerializeField] public int _slotCount;
 
     [SerializeField] public List<Item> _items;
     
@@ -26,7 +26,7 @@ public class InventoryData : ScriptableObject
         _inventoryName = "";
         _inventoryDescription = "";
         _inventoryType = INVENTORYTYPE.CHARACTERINVENTORY;
-        _slotSize = 9;
+        _slotCount = 9;
 
         _items = new List<Item>();
     }

@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class Panel_Inventory : MonoBehaviour
 {
-    [SerializeField] private UI_Manager uiManager;
+    [SerializeField] private UI_Manager _uiManager;
+    [SerializeField] private InventoryUI _inventoryUI;
     void Start()
     {
         gameObject.SetActive(false);
-        uiManager.OnViewStateChanged += OnViewStateChanged;
+        _uiManager.OnViewStateChanged += OnViewStateChanged;
+        _uiManager.OnInventoryDataChanged += OnInventoryDataChanged;
     }
 
     public void OnViewStateChanged(VIEWSTATE newViewState)
@@ -21,5 +23,9 @@ public class Panel_Inventory : MonoBehaviour
         {
             gameObject.SetActive(false);
         }
+    }
+    public void OnInventoryDataChanged(InventoryData newInventoryData)
+    {
+        _inventoryUI.SetInventory(newInventoryData);
     }
 }

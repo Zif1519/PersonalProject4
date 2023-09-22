@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Character : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class Character : MonoBehaviour
     public event Action<StatusData> OnStatusDataChanged;
 
     [SerializeField] private CharacterData _currentCharacterData;
+    [SerializeField] SpriteRenderer _currentSpriteRenderer;
 
     public CharacterData CharacterData 
     { 
@@ -29,8 +31,19 @@ public class Character : MonoBehaviour
     }
     public InventoryData InventoryData => _currentCharacterData._inventoryData;
     public InventoryData EquipmentData => _currentCharacterData._equipmentData;
-    public StatusData StatusData => _currentCharacterData._statusData; 
-   
+    public StatusData StatusData => _currentCharacterData._statusData;
+
+
+    private void Start()
+    {
+        UI_Manager.Instance.OnCharacterDataChanged += ChangeCharacterSprite;
+        ChangeCharacterSprite(_currentCharacterData);
+    }
+    private void OnDestroy()
+    {
+        UI_Manager.Instance.OnCharacterDataChanged -= ChangeCharacterSprite;
+    }
+
     public void CallEventOnCharacterDataChanged()
     {
         OnCharacterDataChanged?.Invoke(CharacterData);
@@ -50,5 +63,10 @@ public class Character : MonoBehaviour
     public void SetCharacterData(CharacterData newData)
     {
         CharacterData = newData;
+    }
+
+    public void ChangeCharacterSprite(CharacterData newData)
+    {
+        _currentSpriteRenderer.sprite = newData._characterSprite;
     }
 }

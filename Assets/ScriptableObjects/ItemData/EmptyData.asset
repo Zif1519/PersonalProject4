@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 63124ff902abd9e4cba15e44121d7399, type: 3}
-  m_Name: Apple
+  m_Name: EmptyData
   m_EditorClassIdentifier: 
-  _itemDataID: 0
+  _itemDataID: -1
   _itemBaseName: 
   _itemBaseDescription: 
-  _itemBasePrice: 0
+  _itemBasePrice: 50
   _itemBaseType: 0
-  _itemBaseRarity: 1
-  _itemSprite: {fileID: 21300000, guid: 60c1d42986dc0094c808b9e135f31ba2, type: 3}
+  _itemBaseRarity: 0
+  _itemSprite: {fileID: 21300000, guid: f1191f8d2b2b9784fa6ed9188da4a79e, type: 3}

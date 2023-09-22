@@ -14,7 +14,7 @@ public class UI_Manager : MonoBehaviour
     public event Action<VIEWSTATE> OnViewStateChanged;
     public event Action<CharacterData> OnCharacterDataChanged;
 
-    public Sprite[] _item_BackgroundSprites;
+    // public Sprite[] _item_BackgroundSprites;
     //public Sprite[] _item_frameSprites;
 
     private void Awake()
